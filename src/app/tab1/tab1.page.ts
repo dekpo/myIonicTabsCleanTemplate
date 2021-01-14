@@ -13,8 +13,15 @@ export class Tab1Page implements OnInit{
 
 ngOnInit(){
   this.storageService.getFavPhotos().then((fav) => {
-    console.log(fav)
+    console.log('ngOnInit',fav)
   });
+}
+
+ionViewWillEnter(){
+  this.storageService.getFavPhotos().then((fav) => {
+    console.log('ionViewWillEnter',fav)
+  });
+    
 }
 
 }
