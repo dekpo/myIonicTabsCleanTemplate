@@ -19,6 +19,8 @@
     </ion-card-content>
   </ion-card>
 
+  <ion-button *ngIf="!addedToFav" expand="full" (click)="addToFavorites()">Ajouter aux Favoris</ion-button>
+
   <ion-button expand="full" routerLink="/tabs/tab2">Retour à la liste</ion-button>
 
 </ion-content>

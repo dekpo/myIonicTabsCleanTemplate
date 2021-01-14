@@ -15,7 +15,6 @@ export class Tab2Page implements OnInit {
 
   ngOnInit(){
     // on charge les données au démarrage du composant
-    console.log( this.photoService.data );
     this.photoList = this.photoService.data;
   }
 
