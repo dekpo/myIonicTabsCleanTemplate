@@ -10,6 +10,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-
+  <ion-list>
+    <app-list-item *ngFor="let img of favArray" [img]="img"></app-list-item>
+  </ion-list>
 </ion-content>

@@ -33,9 +33,17 @@ export class DetailsPage implements OnInit {
       this.favArray.push(this.photoDetails);
       this.storageService.setFavPhotos(this.favArray);
       this.addedToFav = true;
-      console.log( data );
+      console.log("addToFavorites ok !: ",data );
     }
-
+    
+    async removeFromFav(id){
+      const index = await this.storageService.getFavById(id);
+      const data = await this.storageService.getFavPhotos();
+      data.splice(index,1);
+      this.storageService.setFavPhotos(data);
+      this.addedToFav = false;
+      console.log("removeFromFav ok !: ",data );
+    }
 
 
   ngOnInit() {
